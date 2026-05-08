@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import FriendDetails from "../pages/FriendDetails";
 
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,7 @@ export const router = createBrowserRouter([
         element: <FriendDetails/> ,
         loader : () => fetch( "/friends.json" )
       }
+    
     ],
     errorElement: <h1>This page is not found</h1>
   },

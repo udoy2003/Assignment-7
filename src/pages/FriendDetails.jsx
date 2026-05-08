@@ -149,12 +149,12 @@ const FriendDetails = () => {
                       <span className="text-xl text-gray-700">Call</span>
                     </button>
       
-                    <button onClick={() => handleInteraction("text")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => handleInteraction("Text")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaRegCommentDots className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Text</span>
                     </button>
       
-                    <button onClick={() => handleInteraction("video")} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => handleInteraction("Video")} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaVideo className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Video</span>
                     </button>
