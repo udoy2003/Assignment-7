@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 import {
   FaPhoneAlt,
+   FaVideo,
   FaRegCommentDots,
   FaHandshake,
 } from "react-icons/fa";
-import { FaVideo } from "react-icons/fa6";
 
 const Timeline = () => {
   const [timelineData, setTimelineData] = useState([]);
@@ -26,40 +26,23 @@ const Timeline = () => {
       : timelineData.filter((item) => item.type === filter);
 
  
-  const getIcon = (type) => {
-    switch (type) {
-      case "Call":
-        return (
-          <div className="text-xl text-gray-500">
-            <FaPhoneAlt />
-          </div>
-        );
+ const getIcon = (type) => {
+  const t = type.toLowerCase();
 
-      case "Video":
-        return (
-          <div className="text-xl text-blue-500">
-        <FaVideo />
-          </div>
-        );
+  if (t === "call")
+    return <FaPhoneAlt className="text-xl text-green-500" />;
 
-      case "Text":
-        return (
-          <div className="text-xl text-green-500">
-            <FaRegCommentDots />
-          </div>
-        );
+  if (t === "video")
+    return <FaVideo className="text-xl text-blue-500" />;
 
-      case "Meetup":
-        return (
-          <div className="text-xl text-yellow-500">
-            <FaHandshake />
-          </div>
-        );
+  if (t === "text")
+    return <FaRegCommentDots className="text-xl text-red-500" />;
 
-      default:
-        return null;
-    }
-  };
+  if (t === "meetup")
+    return <FaHandshake className="text-xl text-yellow-500" />;
+
+  return null;
+};
 
   return (
     <div className="min-h-screen bg-base-200 px-4 md:px-10 py-10">
