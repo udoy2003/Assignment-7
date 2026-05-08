@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from "react";
 import {
   FaPhoneAlt,
-  FaVideo,
   FaRegCommentDots,
   FaHandshake,
 } from "react-icons/fa";
+import { FaVideo } from "react-icons/fa6";
 
 const Timeline = () => {
   const [timelineData, setTimelineData] = useState([]);
@@ -38,7 +38,7 @@ const Timeline = () => {
       case "Video":
         return (
           <div className="text-xl text-blue-500">
-            <FaVideo />
+        <FaVideo />
           </div>
         );
 

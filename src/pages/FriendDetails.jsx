@@ -15,8 +15,8 @@ const FriendDetails = () => {
 
   const friends = useLoaderData();
   const expectedFriend = friends.find(friend => friend.id == id);
-
 // timeline controlling  code :
+
   const handleInteraction = (type) => {
   const newInteraction = {
     id: Date.now(),
@@ -34,6 +34,8 @@ const FriendDetails = () => {
     JSON.stringify([newInteraction, ...existing])
   );
 };
+
+
 
   return (
        <div className="bg-[#f3f4f6] w-full max-w-7xl mx-auto py-8 px-4">
@@ -142,12 +144,12 @@ const FriendDetails = () => {
       
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     
-                    <button onClick={() => handleInteraction("Call")} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => handleInteraction("Call")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaPhoneAlt className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Call</span>
                     </button>
       
-                    <button onClick={() => handleInteraction("text")} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => handleInteraction("text")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaRegCommentDots className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Text</span>
                     </button>
