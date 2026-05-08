@@ -8,6 +8,7 @@ import {
   FaArchive,
   FaBell,
 } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const FriendDetails = () => {
  
@@ -23,7 +24,9 @@ const FriendDetails = () => {
     type,
     name: expectedFriend.name,
     picture: expectedFriend.picture,
-    date: new Date().toLocaleString(),
+    date: new Date().toLocaleString()
+
+
   };
 
   const existing =
@@ -144,17 +147,23 @@ const FriendDetails = () => {
       
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     
-                    <button onClick={() => handleInteraction("Call")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                  <button onClick={() => {
+                         toast("Clicked on Call!!");
+                         handleInteraction("Call");}}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaPhoneAlt className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Call</span>
                     </button>
       
-                    <button onClick={() => handleInteraction("Text")}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => { 
+                      toast("Clicked on text!!");
+                      handleInteraction("Text");}}  className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaRegCommentDots className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Text</span>
                     </button>
       
-                    <button onClick={() => handleInteraction("Video")} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
+                    <button onClick={() => { 
+                      toast("video clicked!!");
+                       handleInteraction("Video")}} className=" rounded-xl py-8 flex flex-col shadow shadow-gray-300 items-center justify-center gap-3 hover:bg-gray-50 transition">
                       <FaVideo className="text-3xl text-gray-700" />
                       <span className="text-xl text-gray-700">Video</span>
                     </button>
