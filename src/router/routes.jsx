@@ -4,6 +4,7 @@ import Timeline from "../pages/timeline";
 import Stats from "../pages/stats";
 import { createBrowserRouter } from "react-router-dom";
 import FriendDetails from "../pages/FriendDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 
 
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       }
     
     ],
-    errorElement: <h1>This page is not found</h1>
+    errorElement: <ErrorPage/>
   },
   
 ]);

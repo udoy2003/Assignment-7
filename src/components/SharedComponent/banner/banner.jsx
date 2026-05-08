@@ -27,14 +27,21 @@ const Banner = () => {
 
     
         <div className="mt-8 flex gap-5 flex-wrap justify-center">
-          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12">Total Friends</button>
+          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12">
+          <p>10 <br /> Total Friends</p>
+            </button>
+
           
-          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12">On Track</button>
+          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12"> 
+            <p> 2 <br />On Track</p></button>
+
           
-          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12">Need Attention</button>
-          
-          <button className="btn bg-white text-gray-600  shadow-sm px-18 py-12">Interactions This Month</button>
-          
+          <button className="btn bg-white  text-gray-600 shadow-sm px-18 py-12"> 
+            <p> 8 <br /> Need Attention</p></button>
+
+       
+          <button className="btn bg-white text-gray-600  shadow-sm px-18 py-12"> 
+            <p> 12 <br /> Interactions This Month</p></button>
         </div>
 
       </div>
