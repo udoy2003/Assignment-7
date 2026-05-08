@@ -3,6 +3,7 @@ import Homepage from "../pages/homepage";
 import Timeline from "../pages/timeline";
 import Stats from "../pages/stats";
 import { createBrowserRouter } from "react-router-dom";
+import FriendDetails from "../pages/FriendDetails";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,11 @@ export const router = createBrowserRouter([
       {
         path: "/stats",
         element: <Stats />
+      },
+      {
+        path: "/friendsDetails/:id",
+        element: <FriendDetails/> ,
+        loader : () => fetch( "/friends.json" )
       }
     ],
     errorElement: <h1>This page is not found</h1>
